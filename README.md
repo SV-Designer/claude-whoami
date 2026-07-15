@@ -12,19 +12,19 @@
 
 ## 安裝
 
-把 `whoami` 資料夾放進 Claude Code 的 skills 目錄即可：
+把 `claude-whoami` 放進 Claude Code 的 skills 目錄即可（把下面的 `<REPO_URL>` 換成你 clone 的來源）：
 
 ```bash
-git clone https://github.com/chensoo8911/whoami-skill.git
-mkdir -p ~/.claude/skills/whoami
-cp whoami-skill/SKILL.md ~/.claude/skills/whoami/SKILL.md
+git clone <REPO_URL> claude-whoami
+mkdir -p ~/.claude/skills/claude-whoami
+cp claude-whoami/SKILL.md ~/.claude/skills/claude-whoami/SKILL.md
 ```
 
 或用 symlink（source of truth 留在 clone 下來的 repo，之後 `git pull` 就自動更新）：
 
 ```bash
-git clone https://github.com/chensoo8911/whoami-skill.git ~/somewhere/whoami-skill
-ln -s ~/somewhere/whoami-skill ~/.claude/skills/whoami
+git clone <REPO_URL> ~/somewhere/claude-whoami
+ln -s ~/somewhere/claude-whoami ~/.claude/skills/claude-whoami
 ```
 
 裝好後重開 Claude Code session，說「我誰」就會觸發。
